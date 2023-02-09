@@ -12,7 +12,7 @@ This project is my own modeified version with added features of the game project
 
 -
 
-*NOTE:
+-**NOTE**:
 
 ‏‏‎ ‎
 
