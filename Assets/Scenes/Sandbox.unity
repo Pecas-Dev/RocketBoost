@@ -156,7 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ace4eff6de3b7040b1186c3c70b2847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speedThrust: 750
+  rotationThrust: 150
 --- !u!65 &658384239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -249,7 +250,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 56
   m_CollisionDetection: 0
 --- !u!1 &705507993
 GameObject:
@@ -519,7 +520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.19554074, y: -0.005579828, z: 0.0011125797, w: 0.98067904}
-  m_LocalPosition: {x: -2.2128825, y: 4.122948, z: -6.006544}
+  m_LocalPosition: {x: -1.91, y: 4.42, z: -6.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

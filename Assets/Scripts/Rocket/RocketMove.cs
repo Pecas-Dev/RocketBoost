@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RocketMove : MonoBehaviour
 {
-    [SerializeField] float speed = 10f;
+    [SerializeField] float speedThrust = 100f;
+    [SerializeField] float rotationThrust = 50f;
 
     Rigidbody rocketRb;
 
@@ -20,11 +21,40 @@ public class RocketMove : MonoBehaviour
 
     void Update()
     {
-        yValue = Input.GetAxis("Vertical");
-        xValue = Input.GetAxis("Horizontal");
-        zValue = Input.GetAxis("Horizontal");
+        //yValue = Input.GetAxis("Vertical");
+        //xValue = Input.GetAxis("Horizontal");
+        //zValue = Input.GetAxis("Horizontal");
 
-        transform.Translate(0, yValue * speed * Time.deltaTime, 0);
-        transform.Rotate(0, 0, -zValue * 200 * Time.deltaTime);
+        RelativeForce();
+        Rotation();
+
+        //transform.Translate(0, yValue * speedhTrust * Time.deltaTime, 0);
+        //transform.Rotate(0, 0, -zValue * 200 * Time.deltaTime);
+    }
+
+    void RelativeForce()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rocketRb.AddRelativeForce(Vector3.up * speedThrust * Time.deltaTime);
+        }
+    }
+
+    void Rotation()
+    {
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            RotationMovement(rotationThrust);
+        }
+
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            RotationMovement(-rotationThrust);
+        }
+    }
+
+    void RotationMovement(float rotation)
+    {
+        transform.Rotate(Vector3.forward * rotation * Time.deltaTime);
     }
 }
