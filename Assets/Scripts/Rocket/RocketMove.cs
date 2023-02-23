@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class RocketMove : MonoBehaviour
@@ -27,16 +26,17 @@ public class RocketMove : MonoBehaviour
 
         RelativeForce();
         Rotation();
-
-        //transform.Translate(0, yValue * speedhTrust * Time.deltaTime, 0);
+        
+        //transform.Translate(0, yValue * speedTrust * Time.deltaTime, 0);
         //transform.Rotate(0, 0, -zValue * 200 * Time.deltaTime);
     }
 
+    
     void RelativeForce()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rocketRb.AddRelativeForce(Vector3.up * speedThrust * Time.deltaTime);
+            rocketRb.AddRelativeForce(Vector3.up * (speedThrust * Time.deltaTime));
         }
     }
 
@@ -55,6 +55,8 @@ public class RocketMove : MonoBehaviour
 
     void RotationMovement(float rotation)
     {
-        transform.Rotate(Vector3.forward * rotation * Time.deltaTime);
+        rocketRb.freezeRotation = true;
+        transform.Rotate(Vector3.forward * (rotation * Time.deltaTime));
+        rocketRb.freezeRotation = false;
     }
 }
