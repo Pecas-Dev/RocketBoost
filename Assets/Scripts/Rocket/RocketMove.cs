@@ -1,10 +1,14 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RocketMove : MonoBehaviour
 {
     [SerializeField] float speedThrust = 100f;
     [SerializeField] float rotationThrust = 50f;
+
+    [SerializeField] AudioClip thrusters;    
+    public AudioSource thrustAudio;
 
     Rigidbody rocketRb;
 
@@ -14,6 +18,7 @@ public class RocketMove : MonoBehaviour
 
     void Start()
     {
+        thrustAudio = GetComponent<AudioSource>();
         rocketRb = GetComponent<Rigidbody>();
     }
 
@@ -26,12 +31,13 @@ public class RocketMove : MonoBehaviour
 
         RelativeForce();
         Rotation();
-        
+        PlayThrustSound();
+
         //transform.Translate(0, yValue * speedTrust * Time.deltaTime, 0);
         //transform.Rotate(0, 0, -zValue * 200 * Time.deltaTime);
     }
 
-    
+
     void RelativeForce()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -40,9 +46,22 @@ public class RocketMove : MonoBehaviour
         }
     }
 
+    void PlayThrustSound()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            thrustAudio.PlayOneShot(thrusters);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            thrustAudio.Stop();
+        }
+    }
+
     void Rotation()
     {
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             RotationMovement(rotationThrust);
         }
