@@ -8,12 +8,12 @@ Despite not having created my own game **yet**, I have come a long way since the
 
 This is a simple game made in Unity3D about a Rocket, it portrays my progress as a GameDev. Uploaded to GitHub Pages.
 
-This project is my own modeified version with added features of the game project/idea made by [GameDev.tv](https://www.gamedev.tv/). I added new features such as:
-
--
+This project is my own modeified version with added features of the game project/idea made by [GameDev.tv](https://www.gamedev.tv/). 
 
 -**NOTE**:
 
+- Spacebar to use thrusters.
+- A and D Keys || Left and Down Arrow Keys to control rotation.
 ‏‏‎ ‎
 
 
