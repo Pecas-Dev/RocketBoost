@@ -7,11 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: White
+  m_Name: Window
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _EMISSION
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -75,6 +76,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
-    - _EmissionColor: {r: 0.0009765625, g: 0.0009765625, b: 0.0009765625, a: 1}
+    - _Color: {r: 0.71132076, g: 0.96752757, b: 1, a: 1}
+    - _EmissionColor: {r: 0.74339616, g: 2, b: 1.8664118, a: 1}
   m_BuildTextureStacks: []
