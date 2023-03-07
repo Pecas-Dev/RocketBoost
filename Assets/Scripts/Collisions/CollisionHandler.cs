@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] AudioClip[] rocketCurrentState;
+    [SerializeField] public ParticleSystem[] rocketParticles = new ParticleSystem[3];
 
     AudioSource rocketAudioSource;
 
@@ -90,6 +91,8 @@ public class CollisionHandler : MonoBehaviour
         isTransition = true;
         rocketAudioSource.Stop();
         rocketAudioSource.PlayOneShot(rocketCurrentState[0]);
+        rocketParticles[2].Play();
+        rocketParticles[0].Stop();
         rocketMove.enabled = false;
     }
 
@@ -98,6 +101,8 @@ public class CollisionHandler : MonoBehaviour
         isTransition = true;
         rocketAudioSource.Stop();
         rocketAudioSource.PlayOneShot(rocketCurrentState[1]);
+        rocketParticles[1].Play();
+        rocketParticles[0].Stop();
         rocketMove.enabled = false;
     }
 }

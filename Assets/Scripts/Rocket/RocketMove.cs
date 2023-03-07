@@ -16,10 +16,13 @@ public class RocketMove : MonoBehaviour
     float xValue;
     float zValue;
 
+    CollisionHandler collisionHandler;
+
     void Start()
     {
         thrustAudio = GetComponent<AudioSource>();
         rocketRb = GetComponent<Rigidbody>();
+        collisionHandler = FindObjectOfType<CollisionHandler>();
     }
 
 
@@ -51,11 +54,13 @@ public class RocketMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             thrustAudio.PlayOneShot(thrusters);
+            collisionHandler.rocketParticles[0].Play();
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
             thrustAudio.Stop();
+            collisionHandler.rocketParticles[0].Stop();
         }
     }
 
