@@ -1,8 +1,6 @@
 # RocketBoost
 
-**- The Repos in my GitHub page are logs of my progress as a Game Developer.** 
-
-‏‏‎ ‎
+A simple 3D game about a rocket.
 
 
 Despite not having created my own game **yet** (as for 19/02/2023 I have published my own game: [Unplumbed: A stickman's end](https://github.com/Pecas-Dev/Unplumbed-A-Stickman-s-End)), I have come a long way since the first time I decided that I wanted to dedicate my life to create videogames. Every journey starts with a first step, and these are my first steps (Like my first ever videogame (: [First Steps](https://pecasdev.itch.io/firststeps)).
@@ -33,3 +31,4 @@ In short, the general concpet of the game is **GameDev.TV's**, and this is my ow
 -------------------------------------------------------------------------------------------------------
 
 - **AS FOR 2021-2023, THE GAMES WITH THIS MESSAGE ARE THE RESULTS OF MY OWN MODIFIED VERSIONS OF GAMEDEV.TV'S ORIGINAL VERSION OF THEIR GAMES.**
+- **The Repos in my GitHub page are logs of my progress as a Game Developer.** 
