@@ -6,9 +6,14 @@ Despite not having created my own game **yet**, I have come a long way since the
 
 -------------------------------------------------------------------------------------------------------
 
-This is a simple game made in Unity3D about a Rocket, it portrays my progress as a GameDev. Uploaded to GitHub Pages.
+This is a simple game made in Unity3D about a Rocket that the player needs to take from a point A to a point B without crashing and running out of fuel. It portrays my progress as a Game Dev. Uploaded to GitHub Pages.
 
-This project is my own modeified version with added features of the game project/idea made by [GameDev.tv](https://www.gamedev.tv/). 
+This project is my own modeified version with added features of the game project/idea made by [GameDev.tv](https://www.gamedev.tv/). This features include:
+
+- A theme related, fine-tuned UI.
+- Other features
+
+-------------------------------------------------------------------------------------------------------
 
 -**NOTE**:
 
