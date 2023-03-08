@@ -9,6 +9,7 @@ public class SceneTransition : MonoBehaviour
     public Animator transitionAnimator;
 
     [SerializeField] float transitionTime = 1.5f;
+    [SerializeField] float mainMenuPlayButtonTime = 6f;
 
     CollisionHandler collisionHandler;
 
@@ -34,5 +35,14 @@ public class SceneTransition : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         collisionHandler.SandBox2();
+    }
+
+    public IEnumerator MainMenuTransition() 
+    {
+        transitionAnimator.SetTrigger("Start");
+
+        yield return new WaitForSeconds(mainMenuPlayButtonTime);
+
+        SceneManager.LoadScene("Sandbox");
     }
 }
