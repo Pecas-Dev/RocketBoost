@@ -1,14 +1,21 @@
 # RocketBoost
 
-**The Repos in my GitHub page are logs of my progress as a Game Developer.** 
+**- The Repos in my GitHub page are logs of my progress as a Game Developer.** 
 
-Despite not having created my own game **yet**, I have come a long way since the first time I decided that I wanted to dedicate my life to create videogames. Every journey starts with a first step, and these are my first steps.
+‏‏‎ ‎
+
+
+Despite not having created my own game **yet** (as for 19/02/2023 I have published my own game: [Unplumbed: A stickman's end](https://github.com/Pecas-Dev/Unplumbed-A-Stickman-s-End)), I have come a long way since the first time I decided that I wanted to dedicate my life to create videogames. Every journey starts with a first step, and these are my first steps (Like my first ever videogame (: [First Steps](https://pecasdev.itch.io/firststeps)).
 
 -------------------------------------------------------------------------------------------------------
 
-This is a simple game made in Unity3D about a Rocket, it portrays my progress as a GameDev. Uploaded to GitHub Pages.
+This is a simple game made in Unity3D about a Rocket that the player needs to take from a point A to a point B without crashing and running out of fuel. It portrays my progress as a Game Dev. Uploaded to GitHub Pages.
 
-This project is my own modeified version with added features of the game project/idea made by [GameDev.tv](https://www.gamedev.tv/). 
+This project is my own modeified version with added features of the game project/idea made by [GameDev.tv](https://www.gamedev.tv/). This features include:
+
+- A theme related, fine-tuned UI.
+- Other features
+
 
 -**NOTE**:
 
