@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ba4650eb6f335fe42bff2bc5b12c3456
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ROCKETWILDNESS
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ce8bbb0b5fd34fd4b9646c12ef3d9fac, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
