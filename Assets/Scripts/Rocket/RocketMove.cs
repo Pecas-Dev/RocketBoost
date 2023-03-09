@@ -7,6 +7,8 @@ public class RocketMove : MonoBehaviour
     [SerializeField] float speedThrust = 100f;
     [SerializeField] float rotationThrust = 50f;
 
+    [SerializeField] public ParticleSystem[] sideThrustParticles = new ParticleSystem[2];
+
     [SerializeField] AudioClip thrusters;    
     public AudioSource thrustAudio;
 
@@ -69,11 +71,27 @@ public class RocketMove : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             RotationMovement(rotationThrust);
+
+            if (!sideThrustParticles[0].isPlaying && !sideThrustParticles[1].isPlaying)
+            {
+                sideThrustParticles[0].Play();
+            }
         }
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             RotationMovement(-rotationThrust);
+
+            if (!sideThrustParticles[1].isPlaying && !sideThrustParticles[0].isPlaying)
+            {
+                sideThrustParticles[1].Play();
+            }
+        }
+
+        else
+        {
+            sideThrustParticles[0].Stop();
+            sideThrustParticles[1].Stop();
         }
     }
 

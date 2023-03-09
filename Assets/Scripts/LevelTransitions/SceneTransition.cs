@@ -9,7 +9,7 @@ public class SceneTransition : MonoBehaviour
     public Animator transitionAnimator;
 
     [SerializeField] float transitionTime = 1.5f;
-    [SerializeField] float mainMenuPlayButtonTime = 6f;
+    [SerializeField] float mainMenuPlayButtonTime = 4f;
 
     CollisionHandler collisionHandler;
 

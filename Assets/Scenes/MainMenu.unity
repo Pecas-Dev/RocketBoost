@@ -622,6 +622,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &721450448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,6 +1048,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1213748190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1421,7 +1423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionAnimator: {fileID: 1213748189}
   transitionTime: 1.5
-  mainMenuPlayButtonTime: 6.2
+  mainMenuPlayButtonTime: 4
 --- !u!4 &1832969986
 Transform:
   m_ObjectHideFlags: 0
@@ -1632,6 +1634,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2084502797
 MonoBehaviour:
   m_ObjectHideFlags: 0

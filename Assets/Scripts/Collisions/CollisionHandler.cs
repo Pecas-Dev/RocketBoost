@@ -93,6 +93,8 @@ public class CollisionHandler : MonoBehaviour
         rocketAudioSource.PlayOneShot(rocketCurrentState[0]);
         rocketParticles[2].Play();
         rocketParticles[0].Stop();
+        rocketMove.sideThrustParticles[0].Stop();
+        rocketMove.sideThrustParticles[1].Stop();
         rocketMove.enabled = false;
     }
 
@@ -103,6 +105,8 @@ public class CollisionHandler : MonoBehaviour
         rocketAudioSource.PlayOneShot(rocketCurrentState[1]);
         rocketParticles[1].Play();
         rocketParticles[0].Stop();
+        rocketMove.sideThrustParticles[0].Stop();
+        rocketMove.sideThrustParticles[1].Stop();
         rocketMove.enabled = false;
     }
 }
