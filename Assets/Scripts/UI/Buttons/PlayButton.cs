@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayButton : MonoBehaviour
@@ -13,6 +12,8 @@ public class PlayButton : MonoBehaviour
     public AudioSource musicSource;
 
     bool isPlayPressed = false;
+    float fadeOutDuration = 2.5f;
+    float fadeOutStartTime;
 
     void Start()
     {
@@ -21,9 +22,21 @@ public class PlayButton : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayPressed == true)
+        if (isPlayPressed)
         {
-            musicSource.volume = musicSource.volume - 0.0005f;
+            float elapsedTime = Time.time - fadeOutStartTime;
+            float currentVolume = musicSource.volume;
+            float targetVolume = 0f;
+            if (elapsedTime < fadeOutDuration)
+            {
+                float volumeStep = currentVolume * Time.deltaTime / fadeOutDuration;
+                targetVolume = Mathf.Max(currentVolume - volumeStep, 0f);
+            }
+            else
+            {
+                targetVolume = 0f;
+            }
+            musicSource.volume = targetVolume;
         }
     }
 
@@ -36,6 +49,7 @@ public class PlayButton : MonoBehaviour
     {
         playButtonAudioSource.PlayOneShot(playButtonPressedAudioClip);
         isPlayPressed = true;
+        fadeOutStartTime = Time.time;
     }
 
     public void PlayButtonTransition()
@@ -44,7 +58,7 @@ public class PlayButton : MonoBehaviour
 
         IEnumerator WaitTransitionTime()
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(fadeOutDuration);
             StartCoroutine(transition.MainMenuTransition());
         }
     }
